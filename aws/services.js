@@ -8,5 +8,6 @@ const iam = new AWS.IAM();
 const kms = new AWS.KMS({ region });
 const dynamodb = new AWS.DynamoDB({ region });
 const cloudformation = new AWS.CloudFormation({ region });
+const cloudtrail = new AWS.CloudTrail({ region });
 
-export { iam, kms, dynamodb, cloudformation };
+export { iam, kms, dynamodb, cloudformation, cloudtrail };
