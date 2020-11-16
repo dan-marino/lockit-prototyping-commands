@@ -12,10 +12,6 @@ const getLogs = (projectName) => {
         AttributeKey: "ResourceType",
         AttributeValue: "AWS::DynamoDB::Table",
       },
-      {
-        AttributeKey: "ResourceName",
-        AttributeValue: `LockitDev${projectName}`,
-      },
     ],
   };
 
@@ -35,7 +31,7 @@ const getLogs = (projectName) => {
           tableName: event.Resources[0].ResourceName,
         };
       });
-      // not sure how we want these logs structured, so I used this for starteßrs
+      // not sure how we want these logs structured, so I used this for starters
       console.log(formattedData);
       return formattedData;
     }
